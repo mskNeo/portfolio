@@ -1,21 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Layout from "./components/Layout";
+
 function App() {
   return (
-    <div className="App" role="main">
-      <article className="App-article">
-        <img src={"/bunlogo.svg"} className="App-logo" alt="logo" />
-        <div style={{ height: "30px" }}></div>
-        <h3>Welcome to Bun!</h3>
-        <div style={{ height: "10px" }}></div>
-        <a
-          className="App-link"
-          href="https://bun.sh/docs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read the docs →
-        </a>
-      </article>
-    </div>
+    <>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
