@@ -1,26 +1,45 @@
 body {
   margin: 0;
   background-color: black;
-  color: white;
-  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  color: rgb(51, 174, 51);
+  font-family: "Press Start 2P", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .main {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .navMenu {
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.navMenu .logoImage {
+  width: 10%;
+  padding: 0 15% 0 0;
+}
+
+.navMenu .links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3%;
+  width: 50%;
+}
+
+.navMenu a {
+  text-decoration: none;
+  color: rgb(51, 174, 51);
 }

@@ -1,14 +1,16 @@
 import React from 'react'
 import { NavMenu } from './NavbarElements'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return (
-        <div>
-            <NavMenu>
-                <p>Element 1</p>
-                <p>Element 2</p>
-                <p>Element 3</p>
-            </NavMenu>
-        </div>
+        <NavMenu>
+            <img src={require('../../assets/logo.png')} alt="logo" className="logoImage" />
+            <div className="links">
+                <Link to="/">Home</Link>
+                <Link to="/projects">Projects</Link>
+                <Link to="/about">About Me</Link>
+            </div>
+        </NavMenu>
     )
 }
