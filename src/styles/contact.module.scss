@@ -1,0 +1,24 @@
+.contact {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .icons {
+        width: 5.25em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        .icon {
+            height: 2em;
+            width: auto;
+        }
+    }
+
+    .logo {
+        height: 120px;
+        width: 120px;
+    }
+}

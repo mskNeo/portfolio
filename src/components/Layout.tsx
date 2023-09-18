@@ -1,12 +1,14 @@
 import React from 'react'
-import Navbar from './Navbar'
-import { Outlet } from 'react-router-dom'
+import styles from '../styles/layout.module.scss'
 
-export default function Layout() {
+type Props = {
+    children: React.ReactNode
+}
+
+export default function Layout({ children }: Props) {
     return (
-        <div className="main">
-            <Navbar />
-            <Outlet />
+        <div className={styles.main}>
+            {children}
         </div>
     )
 }

@@ -1,20 +1,17 @@
-import { Routes, Route } from "react-router-dom";
-
-import About from "./components/About";
-import Home from "./components/Home";
+import Intro from "./components/Intro";
+import Contact from "./components/Contact";
 import Layout from "./components/Layout";
-import Projects from "./components/Projects";
+import styles from './styles/home.module.scss'
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="about" element={<About />} />
-        </Route>
-      </Routes>
+        <Layout>
+          <div className={styles.home}>
+            <Contact />
+            <Intro />
+          </div>
+        </Layout>
     </>
   );
 }
