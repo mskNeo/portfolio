@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
   import { afterNavigate } from '$app/navigation';
+  import { page } from '$app/state';
 
   const pages = [
     { name: 'Home', href: '/' },
@@ -11,7 +12,12 @@
 
   let toggle = $state(false);
 
-  afterNavigate(() => (toggle = false));
+  let currentPage = $state(page.url.pathname);
+
+  afterNavigate(() => {
+	toggle = false;
+  	currentPage = page.url.pathname;
+});
 
   $effect(() => {
     document.body.style.overflow = toggle ? 'hidden' : '';
@@ -72,7 +78,7 @@
   <!-- Always visible on desktop -->
   <ul class="navbar__list navbar__list__desktop">
     {#each pages as { name, href }}
-      <li><a {href}>{name}</a></li>
+      <li><a {href} style:text-decoration={currentPage === href ? 'underline' : ''}>{name}</a></li>
     {/each}
   </ul>
 </nav>
@@ -169,7 +175,6 @@
     }
 
     .navbar {
-      position: static;
       pointer-events: all;
     }
 
@@ -178,11 +183,10 @@
       flex-direction: row;
       align-items: center;
 	  justify-content: flex-end;
-	  gap: 1rem;
-	  margin: 10px 20px;
+	  gap: 2rem;
+	  margin: 1rem 2rem;
     }
 
-    /* Hide the mobile overlay list on desktop (it won't render anyway, but just in case) */
     .navbar__overlay {
       display: none;
     }
