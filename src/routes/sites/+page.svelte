@@ -1,1 +1,1 @@
-<h1>Sites</h1>
+<h1 class="page-title">Sites</h1>

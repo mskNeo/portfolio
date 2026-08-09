@@ -1,1 +1,1 @@
-<h1>Games</h1>
+<h1 class="page-title">Games</h1>

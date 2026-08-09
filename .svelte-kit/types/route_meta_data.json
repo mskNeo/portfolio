@@ -1,6 +1,15 @@
 {
-	"/": [],
-	"/games": [],
-	"/sites": [],
-	"/stories": []
+	"/": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/games": [
+		"src/routes/+layout.server.ts"
+	],
+	"/sites": [
+		"src/routes/+layout.server.ts"
+	],
+	"/stories": [
+		"src/routes/+layout.server.ts"
+	]
 }

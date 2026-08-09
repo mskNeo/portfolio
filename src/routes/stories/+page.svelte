@@ -1,1 +1,1 @@
-<h1>Stories</h1>
+<h1 class="page-title">Stories</h1>

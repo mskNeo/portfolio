@@ -1,0 +1,44 @@
+/* src/app.css */
+:root {
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+
+  --icon-size: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #ffffff;
+    --color-bg: #1a1a1a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+svg {
+  background: transparent;
+}
+
+.page-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.menu__icon {
+  color: var(--color-text);
+  font-size: var(--icon-size);
+}

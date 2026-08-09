@@ -43,7 +43,6 @@ declare module '$env/static/private' {
 	export const USER: string;
 	export const SSH_CLIENT: string;
 	export const npm_config_user_agent: string;
-	export const SSH_AGENT_PID: string;
 	export const XDG_SESSION_TYPE: string;
 	export const GIT_ASKPASS: string;
 	export const npm_node_execpath: string;
@@ -89,7 +88,6 @@ declare module '$env/static/private' {
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const TERM_PROGRAM: string;
 	export const npm_lifecycle_script: string;
-	export const SSH_AUTH_SOCK: string;
 	export const CONDA_PYTHON_EXE: string;
 	export const SHELL: string;
 	export const npm_package_version: string;
@@ -205,7 +203,6 @@ declare module '$env/dynamic/private' {
 		USER: string;
 		SSH_CLIENT: string;
 		npm_config_user_agent: string;
-		SSH_AGENT_PID: string;
 		XDG_SESSION_TYPE: string;
 		GIT_ASKPASS: string;
 		npm_node_execpath: string;
@@ -251,7 +248,6 @@ declare module '$env/dynamic/private' {
 		VSCODE_GIT_IPC_HANDLE: string;
 		TERM_PROGRAM: string;
 		npm_lifecycle_script: string;
-		SSH_AUTH_SOCK: string;
 		CONDA_PYTHON_EXE: string;
 		SHELL: string;
 		npm_package_version: string;
