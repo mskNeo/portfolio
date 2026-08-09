@@ -29,14 +29,17 @@ declare module "$app/types" {
 	type MatcherParam<M> = M extends (param : string) => param is (infer U extends string) ? U : string;
 
 	export interface AppTypes {
-		RouteId(): "/";
+		RouteId(): "/" | "/games" | "/sites" | "/stories";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
-			"/": Record<string, never>
+			"/": Record<string, never>;
+			"/games": Record<string, never>;
+			"/sites": Record<string, never>;
+			"/stories": Record<string, never>
 		};
-		Pathname(): "/";
+		Pathname(): "/" | "/games" | "/sites" | "/stories";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/robots.txt" | string & {};
 	}
