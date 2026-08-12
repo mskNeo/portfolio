@@ -11,7 +11,7 @@ export default defineConfig({
       },
 
       adapter: adapter({
-        fallback: '404.html'
+        fallback: process.env.BASE_PATH ? `${process.env.BASE_PATH}/404.html` : '404.html'
       }),
       paths: {
         base: process.argv.includes('dev') ? '' : process.env.BASE_PATH as ''
