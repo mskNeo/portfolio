@@ -2,6 +2,7 @@
   import { fly } from 'svelte/transition';
   import { afterNavigate } from '$app/navigation';
   import { page } from '$app/state';
+  import { resolve } from '$app/paths';
 
   const pages = [
     { name: 'Home', href: '/' },
@@ -69,7 +70,7 @@
 
       <ul class="navbar__list">
         {#each pages as { name, href }}
-          <li><a {href}>{name}</a></li>
+          <li><a href="{resolve(href as any)}">{name}</a></li>
         {/each}
       </ul>
     </div>
