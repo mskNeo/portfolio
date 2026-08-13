@@ -79,7 +79,7 @@
   <!-- Always visible on desktop -->
   <ul class="navbar__list navbar__list__desktop">
     {#each pages as { name, href }}
-      <li><a {href} style:text-decoration={currentPage === href ? 'underline' : ''}>{name}</a></li>
+      <li><a href="{resolve(href as any)}" style:text-decoration={currentPage === href ? 'underline' : ''}>{name}</a></li>
     {/each}
   </ul>
 </nav>
